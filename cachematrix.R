@@ -1,18 +1,19 @@
-## Following are two functions design to improve computing inverse of a matrix
+## Following are two functions designed to improve computing inverse of a matrix
 ## by storying inverted matrix for future use.
-## If theres another call to compute an inverse for the same matrix
+## If there's another call to compute an inverse for the same matrix
 ## the previous result is retrived and no more computation take place.
 
 ## Here is an example usuage of these functions:
 
-##  m <- makeCacheMatrix()                      ## creates empty matrix
-##  m$set(matrix(c(4,3,3,2),nrow=2,ncol=2))     ## sets the matrix
-##  m$get()                                     ## view/get the matrix
-##  cacheSolve(m)                               ## the first call to get the inverse
-                                                ## here solve function is called
-                                                ## to obtain the result
-##  cacheSolve(m)                               ## the second call for the same matrix
-                                                ## the inverse will be simply retrived
+##  m <- makeCacheMatrix()                      ## Creates an empty matrix.
+##  m$set(matrix(c(4,3,3,2),nrow=2,ncol=2))     ## Sets the matrix.
+##  m$get()                                     ## Shows/gets the matrix.
+##  cacheSolve(m)                               ## The first call to get the inverse,
+                                                ## hence the solve function is called
+                                                ## to calculate the inverted matrix.
+##  cacheSolve(m)                               ## The second call for the same matrix
+                                                ## the inverse will be retrived,
+                                                ## the solve function isn't called again.
 
 ## This function creates a special matrix that stores its inverse for futer use.
 ## It's a list containing functions that allow to:
